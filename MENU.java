@@ -23,8 +23,8 @@ public class MENU extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					MENU frame = new MENU();
-					frame.setVisible(true);
+					MENU mframe = new MENU();
+					mframe.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -129,6 +129,9 @@ public class MENU extends JFrame {
 		lblNewLabel_8.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				dispose();
+				chayboquoc BUframe = new chayboquoc();
+				BUframe.setVisible(true);
 			}
 		});
 		lblNewLabel_8.setIcon(new ImageIcon (new ImageIcon("C:\\Users\\Admin\\Downloads\\fast.png").getImage().getScaledInstance(76,71, java.awt.Image.SCALE_SMOOTH)));

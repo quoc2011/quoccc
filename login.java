@@ -5,6 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.ImageIcon;
@@ -18,11 +19,13 @@ import java.awt.event.ActionEvent;
 public class login extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JPasswordField passwordField;
+	private JTextField User;
+	private JPasswordField Pass;
 	private JLabel login;
 	private JButton signin;
 	private JLabel chude;
+	private JLabel error;
+	private JLabel error1;
 
 	/**
 	 * Launch the application.
@@ -52,14 +55,14 @@ public class login extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		textField = new JTextField();
-		textField.setBounds(79, 248, 171, 32);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		User = new JTextField();
+		User.setBounds(79, 248, 171, 32);
+		contentPane.add(User);
+		User.setColumns(10);
 		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(79, 307, 171, 26);
-		contentPane.add(passwordField);
+		Pass = new JPasswordField();
+		Pass.setBounds(79, 307, 171, 26);
+		contentPane.add(Pass);
 		
 		JLabel username = new JLabel("");
 		username.setIcon(new ImageIcon (new ImageIcon("C:\\Users\\Admin\\Downloads\\user.png").getImage().getScaledInstance(34,32, java.awt.Image.SCALE_SMOOTH)));
@@ -78,11 +81,23 @@ public class login extends JFrame {
 		login.setBounds(53, 85, 207, 102);
 		contentPane.add(login);
 		
+		
 		signin = new JButton("\u30ED\u30B0\u30A4\u30F3");
 		signin.setHorizontalTextPosition(SwingConstants.CENTER);
 		signin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			}
+				
+				
+	if (User.getText().equals("quoc") && Pass.getText().contentEquals("20112000"))
+	{
+		dispose();
+		MENU mframe = new MENU();
+		mframe.setVisible(true);
+	}else 
+	{
+		error1.setText("ACCOUNT OR PASSWORD ARE INCORRECT....");
+	}
+		}
 		});
 		signin.setFont(new Font("Yu Gothic Medium", Font.BOLD, 16));
 		signin.setBounds(86, 408, 133, 32);
@@ -95,5 +110,11 @@ public class login extends JFrame {
 		chude.setFont(new Font("Yu Gothic", Font.BOLD, 15));
 		chude.setBounds(103, 532, 105, 29);
 		contentPane.add(chude);
+		
+		error1 = new JLabel("");
+		error1.setFont(new Font("Tahoma", Font.BOLD, 10));
+		error1.setForeground(Color.RED);
+		error1.setBounds(35, 344, 236, 32);
+		contentPane.add(error1);
 	}
 }
