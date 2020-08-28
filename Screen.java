@@ -58,11 +58,6 @@ public class Screen extends JFrame {
 		lblNewLabel.setBounds(10, 34, 294, 150);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\Admin\\Downloads\\money.png").getImage().getScaledInstance(105,89, java.awt.Image.SCALE_SMOOTH)));
-		lblNewLabel_1.setBounds(99, 213, 105, 89);
-		contentPane.add(lblNewLabel_1);
-		
 		JLabel lblNewLabel_2 = new JLabel("\u8D8A\u65E5\u5DE5\u696D\u5927\u5B66\r\n");
 		lblNewLabel_2.setForeground(Color.RED);
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
@@ -103,5 +98,10 @@ public class Screen extends JFrame {
 		lblNewLabel_3.setIcon(new ImageIcon (new ImageIcon("C:\\Users\\Admin\\Downloads\\wrong.png").getImage().getScaledInstance(31,31, java.awt.Image.SCALE_SMOOTH)));
 		lblNewLabel_3.setBounds(273, 0, 31, 31);
 		contentPane.add(lblNewLabel_3);
+		
+		JLabel lblNewLabel_4 = new JLabel("New label");
+		lblNewLabel_4.setIcon(new ImageIcon("C:\\Users\\Admin\\Downloads\\b0e36ef2-38aa-4209-a456-99ab8bc81dad_200x200.png"));
+		lblNewLabel_4.setBounds(65, 195, 170, 150);
+		contentPane.add(lblNewLabel_4);
 	}
 }

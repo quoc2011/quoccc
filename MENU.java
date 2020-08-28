@@ -131,6 +131,10 @@ public class MENU extends JFrame {
 		lblNewLabel_4.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				dispose ();
+				phithietyeu ptyframe = new phithietyeu();
+				ptyframe.setUndecorated(true);
+				ptyframe.setVisible(true);
 			}
 		});
 		lblNewLabel_4.setIcon(new ImageIcon (new ImageIcon("C:\\Users\\Admin\\Downloads\\money (1).png").getImage().getScaledInstance(76,71, java.awt.Image.SCALE_SMOOTH)));
