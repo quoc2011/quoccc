@@ -10,6 +10,8 @@ import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.ImageIcon;
 import javax.swing.JScrollPane;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class chayboquoc extends JFrame {
 
@@ -23,6 +25,7 @@ public class chayboquoc extends JFrame {
 			public void run() {
 				try {
 					chayboquoc frame = new chayboquoc();
+					frame.setUndecorated(true);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -53,6 +56,32 @@ public class chayboquoc extends JFrame {
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(112, 0, 75, 38);
 		panel.add(lblNewLabel);
+		
+		JLabel lblNewLabel_8 = new JLabel("New label");
+		lblNewLabel_8.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dispose ();
+			}
+		});
+		lblNewLabel_8.setIcon(new ImageIcon (new ImageIcon("C:\\Users\\Admin\\Downloads\\wrong.png").getImage().getScaledInstance(31,27, java.awt.Image.SCALE_SMOOTH)));
+		lblNewLabel_8.setBounds(273, 0, 31, 27);
+		panel.add(lblNewLabel_8);
+		
+		JLabel lblNewLabel_9 = new JLabel("New label");
+		lblNewLabel_9.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dispose ();
+				MENU m1frame = new MENU();
+				m1frame.setUndecorated(true);
+
+				m1frame.setVisible(true);
+			}
+		});
+		lblNewLabel_9.setIcon(new ImageIcon (new ImageIcon("C:\\Users\\Admin\\Downloads\\return.png").getImage().getScaledInstance(31,28, java.awt.Image.SCALE_SMOOTH)));
+		lblNewLabel_9.setBounds(0, 0, 31, 28);
+		panel.add(lblNewLabel_9);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(Color.WHITE);

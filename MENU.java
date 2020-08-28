@@ -24,6 +24,7 @@ public class MENU extends JFrame {
 			public void run() {
 				try {
 					MENU mframe = new MENU();
+					mframe.setUndecorated(true);
 					mframe.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -50,14 +51,9 @@ public class MENU extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JLabel HELLO = new JLabel("\u304A\u306F\u3088\u3046,");
-		HELLO.setBounds(10, 11, 85, 29);
-		HELLO.setFont(new Font("Yu Gothic Light", Font.BOLD, 18));
-		panel.add(HELLO);
-		
-		JLabel NAME = new JLabel("TRINH HOANG QUOC.");
-		NAME.setFont(new Font("Times New Roman", Font.PLAIN, 18));
-		NAME.setBounds(89, 8, 205, 26);
+		JLabel NAME = new JLabel("TRINH HOANG QUOC");
+		NAME.setFont(new Font("Times New Roman", Font.BOLD, 18));
+		NAME.setBounds(89, 38, 205, 26);
 		panel.add(NAME);
 		
 		JLabel STK = new JLabel("STK:");
@@ -84,6 +80,32 @@ public class MENU extends JFrame {
 		lblNewLabel_3.setIcon(new ImageIcon (new ImageIcon("C:\\Users\\Admin\\Downloads\\user (1).png").getImage().getScaledInstance(95,98, java.awt.Image.SCALE_SMOOTH)));
 		lblNewLabel_3.setBounds(10, 51, 95, 98);
 		panel.add(lblNewLabel_3);
+		
+		JLabel lblNewLabel_15 = new JLabel("New label");
+		lblNewLabel_15.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dispose ();
+			}
+		});
+		lblNewLabel_15.setIcon(new ImageIcon (new ImageIcon("C:\\Users\\Admin\\Downloads\\wrong.png").getImage().getScaledInstance(31,29, java.awt.Image.SCALE_SMOOTH)));
+		lblNewLabel_15.setBounds(263, -2, 31, 29);
+		panel.add(lblNewLabel_15);
+		
+		JLabel lblNewLabel_16 = new JLabel("New label");
+		lblNewLabel_16.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dispose ();
+				login Qframe = new login();
+				Qframe.setUndecorated(true);
+
+				Qframe.setVisible(true);
+			}
+		});
+		lblNewLabel_16.setIcon(new ImageIcon (new ImageIcon("C:\\Users\\Admin\\Downloads\\return.png").getImage().getScaledInstance(31,29, java.awt.Image.SCALE_SMOOTH)));
+		lblNewLabel_16.setBounds(0, 0, 31, 29);
+		panel.add(lblNewLabel_16);
 		
 		JLabel lblNewLabel_5 = new JLabel("New label");
 		lblNewLabel_5.addMouseListener(new MouseAdapter() {
@@ -119,6 +141,11 @@ public class MENU extends JFrame {
 		lblNewLabel_7.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				dispose();
+				savingmoney Sframe = new savingmoney();
+				Sframe.setUndecorated(true);
+
+				Sframe.setVisible(true);
 			}
 		});
 		lblNewLabel_7.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\Admin\\Downloads\\money (2).png").getImage().getScaledInstance(76,71, java.awt.Image.SCALE_SMOOTH)));
@@ -131,6 +158,8 @@ public class MENU extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				dispose();
 				chayboquoc BUframe = new chayboquoc();
+				BUframe.setUndecorated(true);
+
 				BUframe.setVisible(true);
 			}
 		});

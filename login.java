@@ -35,6 +35,7 @@ public class login extends JFrame {
 			public void run() {
 				try {
 					login frame = new login();
+					frame.setUndecorated(true);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -88,10 +89,14 @@ public class login extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				
-	if (User.getText().equals("quoc") && Pass.getText().contentEquals("20112000"))
+	if (User.getText().equals("hoangquoc2011") && Pass.getText().contentEquals("20112000"))
 	{
 		dispose();
 		MENU mframe = new MENU();
+		
+
+		mframe.setUndecorated(true);
+
 		mframe.setVisible(true);
 	}else 
 	{

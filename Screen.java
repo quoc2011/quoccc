@@ -27,7 +27,10 @@ public class Screen extends JFrame {
 			public void run() {
 				try {
 					Screen frame = new Screen();
+					frame.setUndecorated(true);
+
 					frame.setVisible(true);
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -52,7 +55,7 @@ public class Screen extends JFrame {
 		lblNewLabel.setForeground(Color.RED);
 		lblNewLabel.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 60));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(10, 11, 294, 150);
+		lblNewLabel.setBounds(10, 34, 294, 150);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
@@ -72,6 +75,8 @@ public class Screen extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
 				login lframe = new login();
+				lframe.setUndecorated(true);
+
 				lframe.setVisible(true);
 			}
 		});
@@ -87,5 +92,16 @@ public class Screen extends JFrame {
 		btnNewButton.setFont(new Font("Yu Gothic", Font.BOLD, 16));
 		btnNewButton.setBounds(84, 412, 150, 40);
 		contentPane.add(btnNewButton);
+		
+		JLabel lblNewLabel_3 = new JLabel("New label");
+		lblNewLabel_3.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dispose();
+			}
+		});
+		lblNewLabel_3.setIcon(new ImageIcon (new ImageIcon("C:\\Users\\Admin\\Downloads\\wrong.png").getImage().getScaledInstance(31,31, java.awt.Image.SCALE_SMOOTH)));
+		lblNewLabel_3.setBounds(273, 0, 31, 31);
+		contentPane.add(lblNewLabel_3);
 	}
 }
